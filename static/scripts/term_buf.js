@@ -4,8 +4,12 @@ if(typeof(Drone) === 'undefined') { Drone = {}; }
 
 (function () {
 	Drone.Buffer = function() {
-		this.lineFormatter = new Filter({stream: true, newline: false});
-	}
+		this.lineFormatter = {
+			toHtml: function(text) {
+				return ansi_up.ansi_to_html(text, { 'classes': true});
+			}
+		};
+	};
 
 	Drone.Buffer.prototype = {
 		lineBuffer: "",
