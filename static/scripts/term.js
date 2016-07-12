@@ -83,7 +83,7 @@ Filter = (function() {
     };
 
     Filter.prototype.createsFold = function(line) {
-        return (line.substring(0,2) === '$ ' || line.substring(0,7) === '[info] ');
+        return (line.substring(0,2) === '$ ' || line.substring(0,2) === '+ ' || line.substring(0,7) === '[info] ');
     };
 
     Filter.prototype.removesPreviousLine = function(line) {
