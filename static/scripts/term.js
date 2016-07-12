@@ -66,6 +66,7 @@ Filter = (function() {
 
         var handle = document.createElement('a');
         handle.className = 'fold-handle';
+        
         handle.addEventListener('click', function(event) {
             event.target.parentNode.classList.toggle('open');
         });
